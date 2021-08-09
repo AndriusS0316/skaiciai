@@ -20,7 +20,11 @@ function pliusClick() {
     // random = parseInt(random) + rez
     console.log("pliusas veikia");
     
+    history.value = "Prie " + parseInt(number.innerText) + " buvo prideta " + rez;
+    
     number.innerText = parseInt(number.innerText) + rez;
+
+    
 }
 
 function minusClick() {
@@ -30,6 +34,8 @@ function minusClick() {
 
     // random = parseInt(random) - rez;
     console.log("minusas veikia");
+
+    history.value = "Is " + parseInt(number.innerText) + " buvo atimta " + rez;
     
     number.innerText = parseInt(number.innerText) - rez;
 }
@@ -39,6 +45,12 @@ function restartClick() {
     console.log("restart veikia");
     rez = 0;
     random = 0;
+
+    setTimeout(function(){
+        history.value = "";
+    }, 3000);
+
+    history.value = "Buvo nuspaustas \"Restart\" mygtukas"
 }
 
 
