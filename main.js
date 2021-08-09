@@ -2,6 +2,7 @@
 let rez = 0;
 let random = 0;
 
+
 const history = document.querySelector('.history');
 const plius = document.querySelector('.plius');
 const minus = document.querySelector('.minus');
@@ -12,17 +13,25 @@ const number = document.querySelector('.number');
 number.innerText = rez;
 
 function pliusClick() {
-    random = random + parseInt(Math.floor(Math.random() * 100 + 1));
+
+    rez = (Math.floor(Math.random() * 100) + 1);
+    console.log(rez);
+
+    // random = parseInt(random) + rez
     console.log("pliusas veikia");
-    console.log(random);
-    number.innerText = number.innerText + random;
+    
+    number.innerText = parseInt(number.innerText) + rez;
 }
 
 function minusClick() {
-    random = random + (Math.floor(Math.random() * 100 + 1));
+    
+    rez = (Math.floor(Math.random() * 100) + 1);
+    console.log(rez);
+
+    // random = parseInt(random) - rez;
     console.log("minusas veikia");
-    console.log(random);
-    number.innerText = number.innerText - random;
+    
+    number.innerText = parseInt(number.innerText) - rez;
 }
 
 function restartClick() {
